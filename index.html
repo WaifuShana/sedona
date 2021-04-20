@@ -58,7 +58,7 @@
           <div class="feature-item feature-item-blue"> 	  
             <div class="feature-item-text">    
   	  	      <h3>Настоящий<br> городок</h3>
- 	  	  	    <p>- №1 -</p>
+ 	  	  	    <p>— №1 —</p>
   	  	      <p>Седона - не аттракцион для туристов,<br> там течёт своя жизнь</p> 
             </div>       
           </div>
@@ -86,7 +86,7 @@
           <div class="feature-item feature-item-blue">
             <div class="feature-item-text">    
   	  	      <h3>Там есть<br> мост дьявола</h3>
-  	    	    <p>- №2 -</p>
+  	    	    <p>— №2 —</p>
   	    	    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
           </div> 
@@ -94,7 +94,7 @@
           <div class="feature-item feature-item-gray">
             <div class="feature-item-text"> 
   	    	    <h3>Небольшая<br> площадь</h3>
-    	    	  <p>- №3 -</p>
+    	    	  <p>— №3 —</p>
   	    	    <p>Все достопримечательности<br> находятся очень близко</p>
             </div>
   	  	  </div>
@@ -102,7 +102,7 @@
   	  	  <div class="feature-item feature-item-gray">
             <div class="feature-item-text"> 
     	    	  <h3>Красивая<br> дорога</h3>
-  	  	      <p>- №4 -</p>
+  	  	      <p>— №4 —</p>
   	    	    <p>Ехать в Седону из Лас-Вегаса совсем<br> не скучно!</p>
             </div>
   	  	  </div>
@@ -110,7 +110,7 @@
   	  	  <div class="feature-item feature-item-gray">
             <div class="feature-item-text"> 
   	  	      <h3>Мало<br> туристов</h3>
-  	  	      <p>- №5 -</p>
+  	  	      <p>— №5 —</p>
   	  	      <p>Большинство едет в гранд каньон<br> и толпится там</p>
             </div>
   	  	  </div>
@@ -120,13 +120,12 @@
   	  </section>
 
   	  <section class="hotel-search">
-
   	  	<h2>Заинтересовались?</h2>
   	  	<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
   	  	<button class="button button-brown hotel-search-button" type="button">Поиск гостиницы в Седоне</button>
         <img src="img/map.jpg" width="1200" height="593" alt="Аризона, Седона">
 
-        <section class="modal-search">
+        <section class="popup-search">
           <h2 class="visually-hidden">Форма поиска гостиницы</h2>
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <div>
@@ -139,9 +138,18 @@
             </div>
             <div class="people-search">
               <label for="adults-search">Взрослые:</label>
-              <input id="adults-search" class="amount-of-adults" type="text" name="adults" value="2">
+              <div class="people-amount">
+                <input type="button" value="-" onClick="change('adults-search',0,10, -1);">
+                <input id="adults-search" class="amount-of-adults" type="text" name="adults" value="2">
+                <input type="button" value="+" onClick="change('adults-search',0,10, 1);">
+              </div>
+
               <label for="children-search">Дети:</label>
-              <input id="children-search" class="amount-of-children" type="text" name="children" value="0">
+              <div class="people-amount">
+                <input type="button" value="-" onClick="change('children-search',0,10, -1);">
+                <input id="children-search" class="amount-of-children" type="text" name="children" value="0">
+                <input type="button" value="+" onClick="change('children-search',0,10, 1);">
+              </div>
             </div>
             <button class="button button-blue" type="submit">Найти</button>
           </form>
@@ -188,6 +196,7 @@
 
     </div>
 
+    <script src="script/popup.js"></script>
   </body>
   
 </html>
