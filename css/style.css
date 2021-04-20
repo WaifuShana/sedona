@@ -461,6 +461,15 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+.search-form input:hover {
+  background-color: #ebebeb;
+}
+
+.search-form input:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
 .search-form label {
   font: inherit;
   font-size: 14px;
@@ -505,6 +514,18 @@ input[type="radio"].visually-hidden {
 .search-form input[type="button"] {
   font-size: 28px;
   color: #a9a9a9;
+
+  background-color: #f2f2f2;
+}
+
+.search-form input[type="button"]:hover {
+  color: #000000;
+
+  background-color: #ebebeb;
+}
+
+.search-form input[type="button"]:focus {
+  color: #81b3d2;
 }
 
 .search-form .button {
