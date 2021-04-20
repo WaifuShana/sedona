@@ -331,8 +331,28 @@ input[type="radio"].visually-hidden {
   margin-bottom: 50px;
 }
 
+.hotel-search .map-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  margin-top: 239px;
+}
+
 .hotel-search-button {
   padding: 30px 140px;
+}
+
+.index-footer {
+  position: absolute;
+  top: 2630px;
+
+  opacity: 0.9;
+}
+
+.index-footer:hover {
+  opacity: 1;
 }
 
 .main-footer .container {
